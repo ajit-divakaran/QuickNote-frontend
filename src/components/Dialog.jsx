@@ -113,7 +113,7 @@ const Dialog = ({
   }, [isCreateClicked]);
 
   return (
-    <>
+    <div className="dark:text-black">
       {!isCreateClicked ? (
         <AnimatePresence>
             {console.log()}
@@ -356,7 +356,7 @@ const Dialog = ({
           )}
         </AnimatePresence>
       )}
-    </>
+    </div>
   );
 };
 export default Dialog;
