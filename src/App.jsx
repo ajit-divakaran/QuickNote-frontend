@@ -14,8 +14,8 @@ function App() {
 
   return (
     // dark:text-[#9f9fa9]
-         <div className="dark:bg-[#18181b] dark:text-white relative ">
-            <button className="absolute right-0 top-0 z-10 w-1/6 border-1 dark:border-white bg-gray border-black" onClick={()=> darkModeHandler()}>
+         <div className="dark:bg-[#18181b] dark:text-white relative  ">
+            <button className="absolute right-0 top-0 z-10 w-[15%] border-1 dark:border-white bg-gray border-black py-2  mt-2 mx-2 rounded-full" onClick={()=> darkModeHandler()}>
                 {
                     
                     dark && <div >Dark</div>
@@ -25,6 +25,7 @@ function App() {
                 }
             </button>
       <Routes>
+        <Route path='/' element={<Login login={true}/>}/>
         <Route path='/login' element={<Login login={true}/>}/>
         <Route path='/register' element={<Login />}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
