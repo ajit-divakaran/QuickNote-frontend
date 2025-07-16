@@ -73,8 +73,9 @@ const Dashboard = () => {
   };
 
   const handleAdd = () => {
-    setDialogOpen(true);
+    console.log('Hello')
     setIsCreateClicked(true);
+    setDialogOpen(true);
   };
 
   const storeDeleteNoteId = (noteId) => {
@@ -128,7 +129,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 auto-rows-minmax-300px-auto sm:grid-cols-3 lg:grid-cols-4 gap-y-5 sm:gap-x-4 place-items-center mt-5">
         {
-        filteredArray.length?
+        filteredArray.length>0?
        ( filteredArray?.map((x, id) => (
           // relative group
           <div
@@ -178,20 +179,7 @@ const Dashboard = () => {
               </div>
             </div>
               <div>Updated {x.updatedAt}</div>
-            <CheckDialog
-              isDeleteOpen={deleteDialogOpen}
-              onDeleteClose={() => setDeleteDialogOpen(false)}
-              onDelete={handleDelete}
-            />
 
-            <Dialog
-              isOpen={dialogOpen}
-              onClose={() => setDialogOpen(false)}
-              currentNote={currentNote}
-              isCreateClicked={isCreateClicked}
-              setIsCreateClicked={setIsCreateClicked}
-              setIsnoteUpdated={setIsnoteUpdated}
-            />
           </div>
         ))):( userNotes?.map((x, id) => (
           // relative group
@@ -242,7 +230,23 @@ const Dashboard = () => {
               </div>
             </div>
               <div className="text-gray-400 text-[10px] mt-4">Last Updated on {new Date(x.updatedAt).toLocaleDateString()}</div>
-            <CheckDialog
+            {/* <CheckDialog
+              isDeleteOpen={deleteDialogOpen}
+              onDeleteClose={() => setDeleteDialogOpen(false)}
+              onDelete={handleDelete}
+            />
+
+            <Dialog
+              isOpen={dialogOpen}
+              onClose={() => setDialogOpen(false)}
+              currentNote={currentNote}
+              isCreateClicked={isCreateClicked}
+              setIsCreateClicked={setIsCreateClicked}
+              setIsnoteUpdated={setIsnoteUpdated}
+            /> */}
+          </div>
+        )))}
+                    <CheckDialog
               isDeleteOpen={deleteDialogOpen}
               onDeleteClose={() => setDeleteDialogOpen(false)}
               onDelete={handleDelete}
@@ -256,8 +260,6 @@ const Dashboard = () => {
               setIsCreateClicked={setIsCreateClicked}
               setIsnoteUpdated={setIsnoteUpdated}
             />
-          </div>
-        )))}
       </div>
     </div>
   );

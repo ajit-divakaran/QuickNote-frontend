@@ -11,6 +11,8 @@ const Dialog = ({
   setIsCreateClicked,
   setIsnoteUpdated
 }) => {
+
+  
   const [isEditing, setIsEditing] = useState(false);
   //   const [headerText, setHeaderText] = useState("");
   //   const [contentText, setContentText] = useState("");
@@ -97,6 +99,7 @@ const Dialog = ({
         setUpdatedNote({ noteid: "", title: "", content: "", tags: [] });
       console.log(reqBody);
       setIsCreateClicked(false)
+      setIsEditing(false);
        onClose();
         }
     
