@@ -177,7 +177,7 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
-
+              <div>Updated {x.updatedAt}</div>
             <CheckDialog
               isDeleteOpen={deleteDialogOpen}
               onDeleteClose={() => setDeleteDialogOpen(false)}
@@ -241,7 +241,7 @@ const Dashboard = () => {
                 </button>
               </div>
             </div>
-
+              <div className="text-gray-400 text-[10px] mt-4">Last Updated on {new Date(x.updatedAt).toLocaleDateString()}</div>
             <CheckDialog
               isDeleteOpen={deleteDialogOpen}
               onDeleteClose={() => setDeleteDialogOpen(false)}
