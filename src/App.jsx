@@ -18,10 +18,10 @@ function App() {
             <button className="absolute right-0 top-0 z-10 w-[15%] border-1 dark:border-white bg-gray border-black py-2  mt-2 mx-2 rounded-full" onClick={()=> darkModeHandler()}>
                 {
                     
-                    dark && <div >Dark</div>
+                    dark && <div ><i className="fa-solid fa-moon mr-4"></i>Dark</div>
                 }
                 {
-                    !dark && <div>Light</div>
+                    !dark && <div><i class="fa-solid fa-sun mr-4"></i>Light</div>
                 }
             </button>
       <Routes>

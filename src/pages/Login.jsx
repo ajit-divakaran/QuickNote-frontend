@@ -57,6 +57,9 @@ const handleLogin = async(email,pasword) =>{
             sessionStorage.setItem('token',result.data.token)
             navigate("/dashboard")
         }
+        else{
+          alert('Invalid Login Credentials')
+        }
     }
 }
 

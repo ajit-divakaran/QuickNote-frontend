@@ -1,1 +1,1 @@
-export const serverUrl = "https://quicknote-backend-wfup.onrender.com"
+export const serverUrl ="https://quicknote-backend-wfup.onrender.com" 

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Dialog from "../components/Dialog";
 import CheckDialog from "../components/CheckDialog";
 import { DeleteUserNoteApi, GetUserNotesApi } from "../services/allApis";
-// import { div } from "framer-motion/client";
+
 
 const Dashboard = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -66,8 +66,7 @@ const Dashboard = () => {
   }
 
   const handleViewNote = (note) => {
-    // const clicknote = userNotes.filter(x=>x._id==noteId)
-    // console.log(clicknote)
+
     console.log(note);
     setCurrentNote(note);
     setDialogOpen(true);
@@ -102,7 +101,7 @@ const Dashboard = () => {
       </button>
 
 {/* search bar */}
-         <div className="w-full max-w-md mx-auto">
+         <div className="w-full max-w-md mx-auto my-2">
       <div className="flex items-center border border-gray-300 rounded-lg px-4 py-2 bg-white shadow-sm focus-within:ring-2 focus-within:ring-blue-400">
         <svg
           className="w-5 h-5 text-gray-500 mr-2"
