@@ -129,7 +129,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 auto-rows-minmax-300px-auto sm:grid-cols-3 lg:grid-cols-4 gap-y-5 sm:gap-x-4 place-items-center mt-5">
         {
-        filteredArray.length || searchValue?
+        filteredArray.length || (searchValue.length>0)?
        ( filteredArray?.map((x, id) => (
           // relative group
           <div
