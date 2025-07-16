@@ -15,9 +15,9 @@ const Dialog = ({
   //   const [headerText, setHeaderText] = useState("");
   //   const [contentText, setContentText] = useState("");
   const [updatedNote, setUpdatedNote] = useState({
-    noteid: "",
-    title: "",
-    content: "",
+    noteid: null,
+    title: null,
+    content: null,
     tags: [],
   });
 
@@ -136,9 +136,8 @@ const Dialog = ({
                     type="text"
                     className="text-xl font-bold w-full mb-4 border border-gray-300 p-2 rounded"
                     value={
-                      updatedNote.title.length > 0
-                        ? updatedNote.title
-                        : currentNote?.title
+                      updatedNote.title
+                       
                     }
                     onChange={(e) =>
                       setUpdatedNote({ ...updatedNote, title: e.target.value })
@@ -155,9 +154,9 @@ const Dialog = ({
                   <textarea
                     className="w-full h-24 border border-gray-300 p-2 rounded mb-4"
                     value={
-                      updatedNote.content.length > 0
-                        ? updatedNote.content
-                        : currentNote.content
+                      
+                        updatedNote.content
+                        
                     }
                     onChange={(e) =>
                       setUpdatedNote({
