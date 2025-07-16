@@ -42,10 +42,11 @@ A full-stack Notes App built using the **MERN** stack and styled with **Tailwind
 git clone https://github.com/ajit-divakaran/QuickNote-frontend.git
 cd QuickNote-frontend
 npm install
-
+```
 **Run the app**
+```bash
 npm run dev
-
+```
 ------------------------------------------------------------------------------------------------------------------
 # React + Vite
 
