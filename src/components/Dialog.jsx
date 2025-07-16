@@ -175,7 +175,7 @@ const Dialog = ({
                     <div className="flex flex-wrap gap-2 ">
                       {updatedNote.tags.length > 0
                         ? updatedNote.tags.map((tag) => (
-                            <div className="rounded px-2 py-1 border-1 border-black dark:border-white w-auto">
+                            <div className="rounded px-2 py-1 border-1 border-black w-auto bg-gray-300 hover:bg-gray-400">
                               {tag}{" "}
                               <i
                                 className="fa-solid fa-xmark"
@@ -186,7 +186,7 @@ const Dialog = ({
                             </div>
                           ))
                         : currentNote.tags.map((tag) => (
-                            <div className="rounded px-2 py-1 border-1 border-black dark:border-white w-auto text-xs">
+                            <div className="rounded px-2 py-1 border-1 border-black bg-gray-300 w-auto text-black hover:bg-gray-400 text-xs">
                               {tag}{" "}
                               <i
                                 className="fa-solid fa-xmark"
@@ -297,7 +297,7 @@ const Dialog = ({
                   <>
                     <div className="flex flex-wrap gap-2 ">
                       {updatedNote.tags.map((tag) => (
-                        <div className="rounded px-2 py-1 border-1 border-black dark:border-white w-auto">
+                        <div className="rounded px-2 py-1 border-1 border-black bg-gray-300 hover:bg-gray-400 w-auto">
                           {tag}{" "}
                           <i
                             className="fa-solid fa-xmark"
